@@ -390,9 +390,13 @@ Map[toVocGraph[#, vocRl["all:path"]] &,
    Map[MapApply[List, EdgeList[#]] &, 
     ckanGrPRselHLTL["ci"]]) // Dimensions
 ckanELexp = Map[{#[[1, 1]], #[[2, 1]]} &, ckanEL, {2}];
+ckanVocELexp =
+ Map[List[#, ToString[ReplaceAll[#, vocRl["all:path"]]]] &,
+  ckanELexp, {3}]
 expdir = mountdir <> "log/D=" <> date <> "/" <> base["ci"]
 SetDirectory[expdir]
 Export["ckanedgelist.json", ckanELexp]
+Export["ckanvocedgelist.json",ckanVocELexp]
 Export["graphProperty.xlsx", {logTotal, ckanLogTotal, ckanChainTotal, 
   ckanGraphSummary}]
 end = AbsoluteTime[Date[]]
