@@ -395,8 +395,8 @@ ckanVocELexp =
   ckanELexp, {3}]
 expdir = mountdir <> "log/D=" <> date <> "/" <> base["ci"]
 SetDirectory[expdir]
-Export["ckanedgelist.json", ckanELexp]
-Export["ckanvocedgelist.json",ckanVocELexp]
+Export["ckanedgelist" <> "." <>date<> ".json", ckanELexp]
+Export["ckanvocedgelist" <> "." <>date<> ".json",ckanVocELexp]
 Export["graphProperty.xlsx", {logTotal, ckanLogTotal, ckanChainTotal, 
   ckanGraphSummary}]
 end = AbsoluteTime[Date[]]
