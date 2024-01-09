@@ -1,52 +1,60 @@
 (* Created with the Wolfram Language : www.wolfram.com *)
 {x_ /; StringMatchQ[x, RegularExpression["https://jdcat.jsps.go.jp/"]] -> 
-  voc["top"], x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/\\?.*"]] -> voc["search"], 
+  voc["wk:*,view,top"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/search.*"]] -> voc["search"], 
+     "https://jdcat.jsps.go.jp/\\?.*"]] -> voc["wk:*,search,"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/facet-search/.*"]] -> voc["search/facet"], 
+     "https://jdcat.jsps.go.jp/search.*"]] -> voc["wk:*,search,"], 
+ x_ /; StringMatchQ[x, RegularExpression[
+     "https://jdcat.jsps.go.jp/facet-search/.*"]] -> 
+  voc["wk:*,search,facet"], 
  x_ /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/get_search_setting.*"]] -> 
-  voc["search/setting"], 
+  voc["wk:*,search,setting"], 
  x_ /; StringMatchQ[x, RegularExpression["https://jdcat.jsps.go.jp/robots.txt\
-"]] -> voc["robot"], 
+"]] -> voc["wk:robot,view,robot.txt"], 
  x_ /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/get_child_list.*"]] -> 
-  voc["internalsystem_access"], 
+  voc["wk:system,internalsystem_access,"], 
  x_ /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/journal_info.*"]] -> 
-  voc["internalsystem_access"], 
+  voc["wk:system,internalsystem_access"], 
  x_ /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/get_path_name_dict.*"]] -> 
-  voc["internalsystem_access"], 
- x_ /; StringMatchQ[x, RegularExpression["https://jdcat.jsps.go.jp/accounts.*\
-"]] -> voc["internalsystem_access"], 
+  voc["wk:system,internalsystem_access"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/records/[0-9]+$"]] -> voc["detail"], 
+     "https://jdcat.jsps.go.jp/accounts.*"]] -> 
+  voc["wk:system,internalsystem_access"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/records/[0-9]+/export.*"]] -> voc["export"], 
+     "https://jdcat.jsps.go.jp/records/[0-9]+$"]] -> voc["wk:*,view,detail"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/oai\\?.*"]] -> voc["export"], 
+     "https://jdcat.jsps.go.jp/records/[0-9]+/export.*"]] -> 
+  voc["wk:*,export,"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/items.*"]] -> voc["admin-function"], 
+     "https://jdcat.jsps.go.jp/oai\\?.*"]] -> voc["wk:*,export,"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/workflow.*"]] -> voc["admin-function"], 
+     "https://jdcat.jsps.go.jp/items.*"]] -> 
+  voc["wk:Management,confirm,item"], 
+ x_ /; StringMatchQ[x, RegularExpression["https://jdcat.jsps.go.jp/workflow.*\
+"]] -> voc["wk:Management,confirm,workflow"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/admin.*"]] -> voc["admin-function"], 
+     "https://jdcat.jsps.go.jp/admin.*"]] -> 
+  voc["wk:Management,confirm,admin"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/login.*"]] -> voc["authenticate"], 
+     "https://jdcat.jsps.go.jp/login.*"]] -> voc["wk:*,authenticate,"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/JDCatmetadata.html"]] -> voc["scheme"], 
+     "https://jdcat.jsps.go.jp/JDCatmetadata.html"]] -> 
+  voc["wk:*,view,scheme"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/inform.html"]] -> voc["information"], 
+     "https://jdcat.jsps.go.jp/inform.html"]] -> 
+  voc["wk:*,view,information"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/about"]] -> voc["about"], 
+     "https://jdcat.jsps.go.jp/about"]] -> voc["wk:*,view,about"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/manual.html"]] -> voc["manual"], 
+     "https://jdcat.jsps.go.jp/manual.html"]] -> voc["wk:*,view,manual"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/link.html"]] -> voc["link_list"], 
+     "https://jdcat.jsps.go.jp/link.html"]] -> voc["wk:*,view,link_list"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/guidance.html"]] -> voc["guide"], 
+     "https://jdcat.jsps.go.jp/guidance.html"]] -> voc["wk:*,view,guide"], 
  x_ /; StringMatchQ[x, RegularExpression[
-     "https://jdcat.jsps.go.jp/analysis.html"]] -> voc["analisys"]}
+     "https://jdcat.jsps.go.jp/analysis.html"]] -> voc["wk:*,view,analisys"]}
