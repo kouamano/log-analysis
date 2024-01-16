@@ -376,7 +376,7 @@ vocELexp[4] =
 
 Print["-- save / export --"]
 savedir = mountdir <> "log/D=" <> date <> "/T=4/_story"
-savefile = "storyGrIdxFlDs3.save"
+savefile = "storyGrIdxFlDs3."<>date<>".save"
 savetarget=savedir<>"/"<>savefile
 Run["rm "<>savetarget]
 Timing[Save[savetarget,storyGrIdxFlDs3]]
