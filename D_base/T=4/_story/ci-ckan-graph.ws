@@ -397,7 +397,7 @@ expdir = mountdir <> "log/D=" <> date <> "/" <> base["ci"]
 SetDirectory[expdir]
 Export["ckanedgelist" <> "." <>date<> ".json", ckanELexp]
 Export["ckanvocedgelist" <> "." <>date<> ".json",ckanVocELexp]
-Export["graphProperty.xlsx", {logTotal, ckanLogTotal, ckanChainTotal, 
+Export["graphProperty."<>date<>".xlsx", {logTotal, ckanLogTotal, ckanChainTotal, 
   ckanGraphSummary}]
 end = AbsoluteTime[Date[]]
 end - start
