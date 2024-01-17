@@ -195,6 +195,7 @@ pickPos["ci"][2] =
     x_ /; x >= 1]];
 (storyGrIdxFlDs3["ci"] = 
    storyGrIdxFlDs2["ci"][[pickPos["ci"][2]]]) // Dimensions
+storyGrIdxFlDs3["ci",date] = storyGrIdxFlDs3["ci"];
 storyGrIdxFlDs3["ci"][[1]]
 savedir = mountdir <> "log/D=" <> date <> "/" <> base["ci"]
 SetDirectory[savedir]

@@ -360,13 +360,13 @@ pickPos[4][1] =
 pickPos[4][2] = 
   Flatten[Position[Map[EdgeCount[#[[3]]] &, storyGrIdxFlDs2[4]], 
     x_ /; x >= 1]];
-(storyGrIdxFlDs3[4] = 
+(storyGrIdxFlDs3[4][date] = 
    storyGrIdxFlDs2[4][[pickPos[4][2]]]) // Dimensions
 
 Print["-- edges --"]
 (eltbl[4] =
-   Table[EdgeList[storyGrIdxFlDs3[4][[i]][[3]]],
-     {i, Length[storyGrIdxFlDs3[4]]}]) // Dimensions
+   Table[EdgeList[storyGrIdxFlDs3[4][date][[i]][[3]]],
+     {i, Length[storyGrIdxFlDs3[4][date]]}]) // Dimensions
 (eltblList[4] = Map[Apply[List, #] &, eltbl[4], {2}]) // Dimensions
 
 Print["-- voc edges --"]
