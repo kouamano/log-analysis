@@ -1,6 +1,7 @@
 while read file;
 do
 grep log\.cs[0-9] ../$file |\
+grep \"code\":\"200 |\
 grep \"referer\": |\
 grep \"path\": |\
 grep -v '\"path\":\"/.*hub/.*api' |\

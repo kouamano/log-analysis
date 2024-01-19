@@ -1,6 +1,7 @@
 while read file;
 do
 grep log\.la000 ../$file |\
+grep \"code\":\"200 |\
 grep -v Health |\
 grep -v Go-http-client |\
 grep -v agent\":\"BaiduSpider |\

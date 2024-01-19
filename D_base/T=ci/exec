@@ -1,6 +1,7 @@
 while read file;
 do
 grep log\.ci000 ../$file |\
+grep 'code\":\"200' |\
 grep -v 'path\":\"/favicon.ico' |\
 grep -v 'path\":\"/static' |\
 grep -v 'path\":\"/ga' |\
