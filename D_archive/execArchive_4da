@@ -3,4 +3,5 @@ targetday=`date -d '4 day ago' '+%Y%m%d'`
 #mkdir -p ${basedir}/D=$targetday
 cd ${basedir}
 tar zcvf D=${targetday}.tgz D=${targetday}
+/home/amano/notebooks/bin/as/as2put /home/amano/notebooks/data/rcoslogs/log/D=${targetday}.tgz s3://togo-log/execarchive/
 pwd
