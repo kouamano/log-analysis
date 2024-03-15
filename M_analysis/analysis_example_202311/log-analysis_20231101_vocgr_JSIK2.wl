@@ -69,7 +69,8 @@ fileDates = Map[StringSplit[#, {"/", "="}][[9]] &, files]
 (*FileNames[files[[1]]]*)
 (*FileNames["hogehoge"]*)
 
-vocdir = "/Volumes/home/NII/togo-log/rcoslogs/voc/"
+(*vocdir = "/Volumes/home/NII/togo-log/rcoslogs/voc/"*)
+vocdir = "/mnt/home/amano/notebooks/data/rcoslogs/voc/"
 
 
 (* Data load *)
