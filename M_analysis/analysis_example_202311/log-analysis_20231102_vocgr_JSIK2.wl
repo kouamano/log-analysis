@@ -56,15 +56,21 @@ exist[a_ /; a > 0] := 1;
 Protect[undefined];
 
 (* Settings *)
-basedir = "/Volumes/home/NII/togo-log/rcoslogs/log/M=202310-202312/";
-datadir = basedir <> "D=*/T=4/_story/";
-files = FileNames[datadir <> "storyGrIdxFlDs3*save"];
+(*basedir = "/Volumes/home/NII/togo-log/rcoslogs/log/M=202310-202312/";*)
+basedir = "/mnt/home/amano/notebooks/data/rcoslogs/log/"
+datadir = basedir <> "D=*/T=4/_story/"
+files = FileNames[datadir <> "storyGrIdxFlDs3*save"]
 
 fileDirs = 
   Map[StringReplace[#, RegularExpression["/[^/]*$"] -> ""] &, files];
-fileDates = Map[StringSplit[#, {"/", "="}][[10]] &, files]
+fileDates = Map[StringSplit[#, {"/", "="}][[9]] &, files]
+
+(*test*)
+(*FileNames[files[[1]]]*)
+(*FileNames["hogehoge"]*)
 
 vocdir = "/Volumes/home/NII/togo-log/rcoslogs/voc/"
+
 
 (* Data load *)
 AbsoluteTiming[Get[files[[tID]]];]
