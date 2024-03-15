@@ -64,7 +64,10 @@ files = FileNames[datadir <> "storyGrIdxFlDs3*save"]
 fileDirs = 
   Map[StringReplace[#, RegularExpression["/[^/]*$"] -> ""] &, files];
 fileDates = Map[StringSplit[#, {"/", "="}][[9]] &, files]
-Exit[]
+
+(*test*)
+(*FileNames[files[[1]]]*)
+(*FileNames["hogehoge"]*)
 
 vocdir = "/Volumes/home/NII/togo-log/rcoslogs/voc/"
 
