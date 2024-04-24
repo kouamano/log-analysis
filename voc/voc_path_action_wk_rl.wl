@@ -18,13 +18,13 @@
   voc["wk:system,internalsystem_access,"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/journal_info.*"]] -> 
-  voc["wk:system,internalsystem_access"], 
+  voc["wk:system,internalsystem_access,"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/get_path_name_dict.*"]] -> 
-  voc["wk:system,internalsystem_access"], 
+  voc["wk:system,internalsystem_access,"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/accounts.*"]] -> 
-  voc["wk:system,internalsystem_access"], 
+  voc["wk:system,internalsystem_access,"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://jdcat.jsps.go.jp/records/[0-9]+$"]] -> voc["wk:*,view,detail"], 
  x_String /; StringMatchQ[x, RegularExpression[
