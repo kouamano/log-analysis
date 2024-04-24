@@ -11,7 +11,7 @@
   voc["cs:*,confirm,token"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://jupyter.cs.rcos.nii.ac.jp/user/.*/rstudio/.*"]] -> 
-  voc["cs:resercher,develop,rstudio"], 
+  voc["cs:researcher,develop,rstudio"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://jupyter.cs.rcos.nii.ac.jp/user/.*/clusters.*"]] -> 
   voc["cs:researcher,develop,cluster"], 
