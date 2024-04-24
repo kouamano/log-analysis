@@ -2,7 +2,7 @@
 {x_String /; StringMatchQ[x, RegularExpression["https://cir.nii.ac.jp/"]] -> 
   voc["ci:*,view,top"], 
  x_String /; StringMatchQ[x, RegularExpression["https://cir.nii.ac.jp/ja"]] -> 
-  voc["ci,*,view,top"], 
+  voc["ci:*,view,top"], 
  x_String /; StringMatchQ[x, RegularExpression["https://cir.nii.ac.jp/\\?.*"]] -> 
   voc["ci:*,view,top"], 
  x_String /; StringMatchQ[x, RegularExpression[
@@ -51,7 +51,7 @@
   voc["ci:*,export,bib"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://cir.nii.ac.jp/crid.*\\.tsv(\\?.*){0,1}"]] -> 
-  voc["ci*,export,bib"], 
+  voc["ci:*,export,bib"], 
  x_String /; StringMatchQ[x, RegularExpression["https://cir.nii.ac.jp/api/.*"]] -> 
   voc["ci:*,request,api"], 
  x_String /; StringMatchQ[x, RegularExpression["https://cir.nii.ac.jp/opensearch/.*\
