@@ -15,7 +15,7 @@
   voc["ci:*,search,books"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://cir.nii.ac.jp/dissertations.*"]] -> 
-  voc["ci:*,search,dssertations"], 
+  voc["ci:*,search,dissertations"], 
  x_String /; StringMatchQ[x, RegularExpression["https://cir.nii.ac.jp/data.*"]] -> 
   voc["ci:*,search,data"], 
  x_String /; StringMatchQ[x, RegularExpression[
@@ -27,7 +27,7 @@
      "https://cir.nii.ac.jp/crid/[0-9]+\\?.*"]] -> 
   voc["ci:*,confirm,detail"], 
  x_String /; StringMatchQ[x, RegularExpression["https://auth.cir.nii.ac.jp/.*"]] -> 
-  voc["ci:*,authenticate,"], 
+  voc["ci:*,authenticate,none"], 
  x_String /; StringMatchQ[x, RegularExpression[
      "https://cir.nii.ac.jp/crid.*/refworks(\\?.*){0,1}"]] -> 
   voc["ci:*,export,bib"], 
