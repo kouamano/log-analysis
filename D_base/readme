@@ -17,3 +17,4 @@ cp -r ../D_base/* ./
 6 exec wolfram
 ./exec-analysis
 ./exec-ckan-analysis
+./exec-us-analysis
