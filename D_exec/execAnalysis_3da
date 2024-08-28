@@ -7,3 +7,4 @@ cp -r ../D_base/* ./
 ./exec-preproc
 ./exec-analysis
 ./exec-ckan-analysis
+./exec-us-analysis
