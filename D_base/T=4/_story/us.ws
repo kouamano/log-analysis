@@ -342,9 +342,9 @@ Map[#[[1]] &, revNoMatchCase["wk"]]
 
 (* Graph *)
 Print["Graph"]
-"/Volumes/home/NII/togo-log/rcoslogs/log/D=" <> date <> \
+"/home/amano/notebooks/data/rcoslogs/log/D=" <> date <> \
 "/T=4/_story/storyGrIdxFlDs3." <> date <> ".save"
-Get["/Volumes/home/NII/togo-log/rcoslogs/log/D=" <> date <> 
+Get["/home/amano/notebooks/data/rcoslogs/log/D=" <> date <> 
    "/T=4/_story/storyGrIdxFlDs3." <> date <> ".save"];
 (dstEdgeListList[4][date] = 
    Map[Map[#[[2]] &, EdgeList[#[[3]]]] &, 
