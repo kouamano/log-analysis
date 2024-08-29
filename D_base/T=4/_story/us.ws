@@ -1,12 +1,14 @@
 Print["START"]
 (* Setting *)
 Print["Setting"]
-basedir = "/Volumes/home/NII/togo-log/rcoslogs/log/"
+(*basedir = "/Volumes/home/NII/togo-log/rcoslogs/log/"*)
+basedir = "/home/amano/notebooks/data/rcoslogs/log/"
 Protect[undefined]
 
 (* voc data *)
 Print["voc data"]
-vocrldir = "/Users/kouamano/gitsrc/log-analysis/voc"
+(*vocrldir = "/Users/kouamano/gitsrc/log-analysis/voc"*)
+vocrldir = "/home/amano/notebooks/data/rcoslogs/voc"
 vocRlFiles = FileNames[vocrldir <> "/*rl.wl"]
 (vocRlList = Map[Get, vocRlFiles]) // Length
 (vocRl["all:path"] = Apply[Join, vocRlList]) // Dimensions
