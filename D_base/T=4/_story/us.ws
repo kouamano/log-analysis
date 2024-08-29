@@ -31,7 +31,7 @@ vocObject["all"] = Select[vocQ["all"], Length[#] > 3 &][[All, 4]]
 
 (* RDM-ontology map data *)
 ontologyfile = \
-"/Users/kouamano/gitsrc/log-analysis/rdm-ontology_vs_voc/ログ基盤ボキャブラリとのマッピング_V3.xlsx"
+"/home/amano/gitsrc/log-analysis/rdm-ontology_vs_voc/ログ基盤ボキャブラリとのマッピング_V3.xlsx"
 xls = Import[ontologyfile];
 (xlssheet = xls[[1]]) // Dimensions
 
