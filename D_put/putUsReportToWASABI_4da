@@ -4,11 +4,8 @@ cd ${basedir}/
 pwd
 ls D=${targetday}/T=4/_story/*.xlsx
 s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate ls s3://rdc-user-story-report
-#s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate mb s3://rdc-user-story-report/test/
-s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate put -r  D=${targetday}/T=4/_story/*.xlsx s3://rdc-user-story-report/${targetday}
+s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate put -r  D=${targetday}/T=4/_story/*.xlsx s3://rdc-user-story-report/${targetday}/
+s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate put -r  D=${targetday}/T=4/_story/*.pdf s3://rdc-user-story-report/${targetday}/
 s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate ls s3://rdc-user-story-report
 
-#hdfs dfs -put T=ci/ckanedgelist.${targetday}.json log-graph/daily/ci/ckanedgelist.${targetday}.json
-#hdfs dfs -put T=4/_story/edgelist-4.${targetday}.json log-graph/daily/all/edgelist-4.${targetday}.json
-#hdfs dfs -copyToLocal /user/rcosloguser02/logs/log-${targetday}.rcoslog000[123].log ./
 #chmod -R 777 ${basedir}/D=$targetday
