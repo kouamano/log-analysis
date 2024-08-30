@@ -1,0 +1,2 @@
+s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate ls s3://rdc-user-story-report
+
