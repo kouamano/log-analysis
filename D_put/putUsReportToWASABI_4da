@@ -2,8 +2,9 @@ basedir=/home/amano/notebooks/data/rcoslogs/log
 targetday=`date -d '4 day ago' '+%Y%m%d'`
 cd ${basedir}/
 pwd
-ls D=${targetday}/T=4/_story/*.xlsx
+ls D=${targetday}/T=4/_story/
 s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate ls s3://rdc-user-story-report
+s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate put -r  D=${targetday}/T=4/_story/RDMvsUS*.json s3://rdc-user-story-report/${targetday}/
 s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate put -r  D=${targetday}/T=4/_story/*.xlsx s3://rdc-user-story-report/${targetday}/
 s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate put -r  D=${targetday}/T=4/_story/*.pdf s3://rdc-user-story-report/${targetday}/
 s3cmd --host=s3.wasabisys.com --host-bucket=ap.ne1.amano --access_key=HBP2CSI6OBGFFYFJ5KMD --secret_key=kVRzasrzHOVk4DEyl6cBymkuFsB633E0fSCGc9ze --no-check-certificate ls s3://rdc-user-story-report
