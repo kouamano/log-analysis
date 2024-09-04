@@ -21,5 +21,5 @@ grep -v -e 'agent\":\".*Applebot/.*\;' |\
 grep -v -e 'agent\":\".*PaperLiBot/.*\;' |\
 grep -v -e 'agent\":\".*PetalBot/.*\;' |\
 grep -v -e 'agent\":\".*GPTBot/.*\;'
-#done < ../filenames > self
-done < ../filenames
+done < ../filenames > self
+#done < ../filenames
