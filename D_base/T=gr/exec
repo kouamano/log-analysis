@@ -1,0 +1,25 @@
+while read file;
+do
+grep log\.gr[0-9] ../$file |\
+#grep -e '\"code\":\"200'
+#grep -v -e 'path\":\"/favicon.ico' |\
+#grep -v -e 'path\":\"/static' |\
+#grep -v -e 'path\":\"/widget' |\
+#grep -v -e 'path\":\"/ping' |\
+#grep -v -e 'path\":\"/api' |\
+#grep -v -e 'path\":\"/\.js\?' |\
+#grep -v -e 'path\":\"/.*\.js$' |\
+#grep -v -e 'path\":\"/.*\.svg$' |\
+grep -v -e 'path\":\"/.*\.png$' |\
+grep -v -e 'agent\":\".*Googlebot/' |\
+grep -v -e 'agent\":\".*AhrefsBot/.*\;' |\
+grep -v -e 'agent\":\".*bingbot/.*\;' |\
+grep -v -e 'agent\":\".*BLEXBot/.*\;' |\
+grep -v -e 'agent\":\".*SemrushBot/.*\;' |\
+grep -v -e 'agent\":\".*DotBot/.*\;' |\
+grep -v -e 'agent\":\".*Applebot/.*\;' |\
+grep -v -e 'agent\":\".*PaperLiBot/.*\;' |\
+grep -v -e 'agent\":\".*PetalBot/.*\;' |\
+grep -v -e 'agent\":\".*GPTBot/.*\;'
+#done < ../filenames > self
+done < ../filenames
