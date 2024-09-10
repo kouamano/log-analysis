@@ -814,9 +814,11 @@ Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "otlOnlyLogTbl_" <>
    date <> ".xlsx", otlOnlyLogTbl["all"]]
 
 (* US which does not appear in log *)
+noMatchUShead = {{"番号", "基盤", "Role", "S", "V", "O"}}
 (noMatchUS["all"] = 
-   Join[nonappUS["ci"], nonappUS["cs"], nonappUS["la"], 
-    nonappUS["wk"]]) // TableForm
+   Join[noMatchUShead, nonappUS["ci"], nonappUS["cs"], nonappUS["la"],
+     nonappUS["wk"]]) // TableForm
+
 basedir <> "D=" <> date <> "/T=4/_story/" <> "noMatchUS_" <> date <> \
 ".xlsx"
 Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "noMatchUS_" <> 
