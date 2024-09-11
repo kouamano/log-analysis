@@ -1,6 +1,6 @@
 while read file;
 do
-grep log\.wk[0-9] ../$file |\
+grep log\.wk1001 ../$file |\
 grep -e '\"code\":\"200' |\
 grep -v -e 'path\":\"/favicon.ico' |\
 grep -v -e 'path\":\"/static' |\
