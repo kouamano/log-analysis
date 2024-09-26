@@ -4,6 +4,7 @@ mkdir -p ${basedir}/D=$targetday
 cd ${basedir}/D=$targetday
 str=`hdfs dfs -copyToLocal /user/rcoslog/logs/log-${targetday}.rcoslog*.log ./ 2>&1`
 chmod -R 777 ${basedir}/D=$targetday
+echo $str
 
 ret=0
 if [[ $str =~ "No such" ]]; then
