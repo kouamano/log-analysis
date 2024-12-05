@@ -13,7 +13,7 @@ x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/account/.*l
 x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/logout.*"]] -> voc["gr:*,logout,none"],
 x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/account/logout.*"]] -> voc["gr:*,logout,none"],
 x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/\\?*goodbye.*"]] -> voc["gr:*,logout,none"],
-x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/\?ticket.*"]] -> voc["gr:*,view,ticket"],
+x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/.*\\?ticket.*"]] -> voc["gr:*,view,ticket"],
 x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/v1/resources/.*"]] -> voc["gr:*,request,api"],
 x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp//*api/.*"]] -> voc["gr:*,request,api"],
 x_String /; StringMatchQ[x, RegularExpression["https://rdm.nii.ac.jp/dashboard/*.*"]] -> voc["gr:*,view,dashboard"],
