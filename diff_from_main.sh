@@ -10,3 +10,9 @@ echo '<- exec-us-analysis ->'
 git --no-pager diff main:D_base/exec-us-analysis linux:D_base/exec-us-analysis
 echo '<- init ->'
 git --no-pager diff main:D_base/init linux:D_base/init
+echo '<- date.ws ->'
+git --no-pager diff main:D_base/T=4/_story/date.ws linux:D_base/T=4/_story/date.ws
+echo '<- graph.ws ->'
+git --no-pager diff main:D_base/T=4/_story/graph.ws linux:D_base/T=4/_story/graph.ws
+echo '<- ci-ckan-graph.ws ->'
+git --no-pager diff main:D_base/T=4/_story/ci-ckan-graph.ws linux:D_base/T=4/_story/ci-ckan-graph.ws
