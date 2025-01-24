@@ -18,3 +18,7 @@ echo '<- ci-ckan-graph.ws ->'
 git --no-pager diff main:D_base/T=4/_story/ci-ckan-graph.ws linux:D_base/T=4/_story/ci-ckan-graph.ws
 echo '<- us.ws ->'
 git --no-pager diff main:D_base/T=4/_story/us.ws linux:D_base/T=4/_story/us.ws
+
+
+echo '<- ci/exec ->'
+git --no-pager diff main:D_base/T=ci/exec linux:D_base/T=ci/exec
