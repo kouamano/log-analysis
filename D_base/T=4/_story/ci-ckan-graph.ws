@@ -402,3 +402,5 @@ Export["graphProperty."<>date<>".xlsx", {logTotal, ckanLogTotal, ckanChainTotal,
   ckanGraphSummary}]
 end = AbsoluteTime[Date[]]
 end - start
+
+Quit[]

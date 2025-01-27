@@ -867,3 +867,5 @@ Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "summary_US_" <>
   date <> ".xlsx", summaryUS]
 
 Print["END"]
+
+Quit[]

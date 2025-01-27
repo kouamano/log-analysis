@@ -398,3 +398,5 @@ Timing[Export[savedir <> "/edgelist-4" <> "." <> date <> ".json", eltblList[4]]]
 Timing[Export[savedir <> "/vocedgelist-4" <> "." <> date <> ".json", vocELexp[4]]]
 
 Print["END:graph.ws"]
+
+Quit[]
