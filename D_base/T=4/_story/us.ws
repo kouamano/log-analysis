@@ -863,8 +863,11 @@ usCount["wk"] - usCount["wk", "uniq"]
     {"la", usCount["la"] - usCount["la", "uniq"]},
     {"wk", usCount["wk"] - usCount["wk", "uniq"]}
     }) // TableForm
-Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "summary_US_" <> 
-  date <> ".xlsx", summaryUS]
+Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "summary_US_" <> date <> ".xlsx", summaryUS]
+
+
+Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "us-ws-procinfo_" <> date <> ".txt", {"PID:",$ProcessID,"PPID:",$ParentProcessID,"USER:",$UserName}]
+
 
 Print["END"]
 
