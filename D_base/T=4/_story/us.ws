@@ -866,7 +866,7 @@ usCount["wk"] - usCount["wk", "uniq"]
 Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "summary_US_" <> date <> ".xlsx", summaryUS]
 
 
-Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "us-ws-procinfo_" <> date <> ".txt", {"PID:",$ProcessID,"PPID:",$ParentProcessID,"USER:",$UserName}]
+Export[basedir <> "D=" <> date <> "/T=4/_story/" <> "ws-us-procinfo.txt", {"PID:",$ProcessID,"PPID:",$ParentProcessID,"USER:",$UserName}]
 
 
 Print["END"]
