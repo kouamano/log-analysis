@@ -397,7 +397,7 @@ Timing[Save[savetarget,ckanCridPRACQ]]
 Timing[Export[savedir <> "/edgelist-4" <> "." <> date <> ".json", eltblList[4]]]
 Timing[Export[savedir <> "/vocedgelist-4" <> "." <> date <> ".json", vocELexp[4]]]
 
-Export[savedir <> "ws-graph-procinfo.txt",{"PID:",$ProcessID,"PPID:",$ParentProcessID,"USER:",$UserName}]
+Export[savedir <> "/ws-graph-procinfo.txt",{"PID:",$ProcessID,"PPID:",$ParentProcessID,"USER:",$UserName}]
 
 Print["END:graph.ws"]
 
