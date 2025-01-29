@@ -676,20 +676,11 @@ USrdmOtlMatchTri["wk"] =
      List, {Join[{{}, {}}, userStoryOtl["sel", "wk"]], 
       Join[rdmOtlQTly["wk"] // Transpose, USrdmOtlMatchTri["wk"]]}] //
      Transpose) // TableForm
-basedir <> "D=" <> date <> "/T=4/_story/" <> "RDMvsUS_Match_Tbl" <> \
-date <> ".json"
-basedir <> "D=" <> date <> "/T=4/_story/" <> "RDMvsUS_Match_Tbl" <> \
-date <> "_ci.json"
-basedir <> "D=" <> date <> "/T=4/_story/" <> "RDMvsUS_Match_Tbl" <> \
-date <> "_cs.json"
-basedir <> "D=" <> date <> "/T=4/_story/" <> "RDMvsUS_Match_Tbl" <> \
-date <> "_la.json"
-basedir <> "D=" <> date <> "/T=4/_story/" <> "RDMvsUS_Match_Tbl" <> \
-date <> "_wk.json"
 Export[basedir <> "D=" <> date <> "/T=4/_story/" <> 
   "RDMvsUS_Match_Tbl" <> date <> ".json", {RDMvsUSTri["ci"], 
   RDMvsUSTri["cs"], RDMvsUSTri["la"], RDMvsUSTri["wk"]}]
-Export[basedir <> "D=" <> date <> "/T=4/_story/" <> 
+
+(*Export[basedir <> "D=" <> date <> "/T=4/_story/" <> 
   "RDMvsUS_Match_Tbl" <> date <> "_ci.json", 
  TableForm[RDMvsUSTri["ci"]]]
 Export[basedir <> "D=" <> date <> "/T=4/_story/" <> 
@@ -700,7 +691,7 @@ Export[basedir <> "D=" <> date <> "/T=4/_story/" <>
  TableForm[RDMvsUSTri["la"]]]
 Export[basedir <> "D=" <> date <> "/T=4/_story/" <> 
   "RDMvsUS_Match_Tbl" <> date <> "_wk.json", 
- TableForm[RDMvsUSTri["wk"]]]
+ TableForm[RDMvsUSTri["wk"]]]*)
 
 (* Appearrance of us to log *)
 userStoryOtlHead
