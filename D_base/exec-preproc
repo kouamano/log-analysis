@@ -4,3 +4,4 @@ cd ${dir}/T=cs; pwd; ./exec; ./1.exec
 cd ${dir}/T=la; pwd; ./exec; ./1.exec
 cd ${dir}/T=wk; pwd; ./exec; ./1.exec
 cd ${dir}/T=gr; pwd; ./exec; ./1.exec
+cd ${dir}/T=jc; pwd; ./exec; ./1.exec
