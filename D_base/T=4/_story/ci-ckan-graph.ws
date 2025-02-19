@@ -402,3 +402,7 @@ Export["graphProperty."<>date<>".xlsx", {logTotal, ckanLogTotal, ckanChainTotal,
   ckanGraphSummary}]
 end = AbsoluteTime[Date[]]
 end - start
+
+Export[savedir <> "/ws-ci-procinfo.txt",{"PID:",$ProcessID,"PPID:",$ParentProcessID,"USER:",$UserName}]
+
+Quit[]
