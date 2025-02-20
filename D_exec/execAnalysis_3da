@@ -1,0 +1,10 @@
+basedir=/home/amano/notebooks/data/rcoslogs/log
+targetday=`date -d '3 day ago' '+%Y%m%d'`
+#mkdir -p ${basedir}/D=$targetday
+cd ${basedir}/D=$targetday
+cp -r ../D_base/* ./
+./init
+./exec-preproc
+./exec-analysis
+./exec-ckan-analysis
+./exec-us-analysis
