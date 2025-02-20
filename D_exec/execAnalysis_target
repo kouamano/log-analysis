@@ -1,4 +1,4 @@
-basedir=/home/amano/notebooks/data/rcoslogs/log
+basedir=/Volumes/home/NII/togo-log/rcoslogs/log
 #targetday=`date -d '3 day ago' '+%Y%m%d'`
 targetday=$1
 #mkdir -p ${basedir}/D=$targetday
