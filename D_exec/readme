@@ -1,0 +1,27 @@
+#
+1. create work dir
+mkdir D=<date>
+
+2. copy logfile to work dir
+cd <work-dir>
+cp <file> ./
+
+3. copy base file
+cp -r ../D_base/* ./
+
+4. initialize
+./init
+
+5 exec reform
+./exec-preproc
+
+6 exec wolfram
+./exec-analysis
+./exec-ckan-analysis
+
+OR 
+
+#
+1. cd /Volumes/home/NII/togo-log/rcoslogs/log/D_exec
+
+2. ./execAnalysis_target YYYYMMDD
